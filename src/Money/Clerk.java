@@ -13,8 +13,11 @@ public class Clerk {
 		giveMe = queryClerk(kb);
 		itemPrice = giveMe[0];
 		amountTendered = giveMe[1];
-		System.out.println(giveMe);
-
+		
+		
+		float changeDue = (itemPrice - amountTendered);
+		System.out.println(changeDue);
+		
 		// public class DoWhile {
 		// int i = 1;
 		// if (i < 1024) {
