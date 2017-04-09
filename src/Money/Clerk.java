@@ -16,7 +16,10 @@ public class Clerk {
 		
 		
 		float changeDue = (itemPrice - amountTendered);
-		System.out.println(changeDue);
+		System.out.println();
+		System.out.printf("The change due is $%.2f\n", changeDue);
+		
+		System.out.printf("$%.2f", changeDue);		
 		
 		// public class DoWhile {
 		// int i = 1;
@@ -26,16 +29,25 @@ public class Clerk {
 		// } while (i < 1024);
 	}// end main
 
+	
+	public static void typeChangeReturn (float changeDue) {
+		// int i = 1;
+		// while (i < 1024) {
+		// i *= 2;
+		// System.out.println("Count is: " + i);
+		// }
+	}
+	
 	public static float[] queryClerk(Scanner s) {
 		System.out.println("Enter the price of the product to be purchased: ");
-		float itemPrice = s.nextFloat();
+			float itemPrice = s.nextFloat();
 
 		System.out.println("Enter the amount of cash the customer tendered: ");
-		float amountTendered = s.nextFloat();
+			float amountTendered = s.nextFloat();
 
 		float[] arrayQuery = new float[2];
-		arrayQuery[0] = itemPrice;
-		arrayQuery[1] = amountTendered;
+			arrayQuery[0] = itemPrice;
+			arrayQuery[1] = amountTendered;
 
 		if (itemPrice > amountTendered) {
 			System.out.println();
@@ -53,11 +65,6 @@ public class Clerk {
 	}// end clerk query method
 }
 
-// User Story #3
-//
-// Display an appropriate message if the customer provided too little money or
-// the exact amount.
-//
 // User Story #4
 //
 // If the amount tendered is more than the cost of the item, display the number
