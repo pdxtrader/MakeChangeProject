@@ -16,10 +16,29 @@ public class Clerk {
 		
 		
 		float changeDue = (itemPrice - amountTendered);
+		float remainingChange;
 		System.out.println();
 		System.out.printf("The change due is $%.2f\n", changeDue);
 		
-		System.out.printf("$%.2f", changeDue);		
+		int penny = 1;
+		int nickel = 5;
+		int dime = 10;
+		int quarter = 25;
+		int washington = 100;
+		int lincoln = 500;
+		int hamilton = 1000;
+		int jackson = 2000;
+		int grant = 5000;
+		int franklin = 10000;  //make a note to clerk that we don't take denoms higher than that
+		
+		//call this into a method, 
+		if (changeDue != remainingChange) {
+			do { 
+				
+				
+			}
+		}
+		
 		
 		// public class DoWhile {
 		// int i = 1;
@@ -52,9 +71,11 @@ public class Clerk {
 		if (itemPrice > amountTendered) {
 			System.out.println();
 			System.out.println("*****ERROR*****ERROR*****ERROR*****ERROR*****");
+			System.out.println();
 			System.out.printf("The purchase price of $%.2f is greater than ", itemPrice);
 			System.out.println();
 			System.out.printf("the amount tendered of $%.2f, please correct\n", amountTendered);
+			System.out.println();
 			System.out.println("*****ERROR*****ERROR*****ERROR*****ERROR*****");
 			System.out.println();
 			arrayQuery = queryClerk(s);
