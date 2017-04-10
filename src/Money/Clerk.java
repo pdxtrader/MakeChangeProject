@@ -13,7 +13,7 @@ public class Clerk {
 		giveMe = queryClerk(kb);
 		itemPrice = giveMe[0];
 		amountTendered = giveMe[1];
-		System.out.printf("The change due is $%.2f\n", (itemPrice - amountTendered));
+		System.out.printf("The change due is $%.2f\n", (amountTendered - itemPrice));
 
 		int changeDue = (int) ((amountTendered - itemPrice) * 100);
 		System.out.println();
@@ -36,12 +36,12 @@ public class Clerk {
 
 		for (int i = 0; i < denomBreakdown.length; i++) { // if plural
 			if ((changeDue / denomBreakdown[i]) > 1) {
-				System.out.println("You owe: " + changeDue / denomBreakdown[i] + " " + bills[i]);
+				System.out.println("The customer is owed: " + changeDue / denomBreakdown[i] + " " + bills[i]);
 				changeDue = changeDue % denomBreakdown[i];
 			}
 			if ((changeDue / denomBreakdown[i]) == 1) { // if single
 														// denomination
-				System.out.println("You owe: " + changeDue / denomBreakdown[i] + " " + bill[i]);
+				System.out.println("The customer is owed: " + changeDue / denomBreakdown[i] + " " + bill[i]);
 				changeDue = changeDue % denomBreakdown[i];
 			}
 		}
@@ -51,7 +51,7 @@ public class Clerk {
 	public static float[] queryClerk(Scanner s) {
 		System.out.println("Enter the price of the product to be purchased: ");
 		float itemPrice = s.nextFloat();
-
+		
 		System.out.println("Enter the amount of cash the customer tendered: ");
 		float amountTendered = s.nextFloat();
 
